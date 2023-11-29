@@ -102,6 +102,54 @@ public class ClienteController {
 	        dao.actualizarclienteF(cliente);
 	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
 	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
+	    /*
+	    @PostMapping("/guardarFCliente/{idcliente}")
+	    public String guardarFCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+	        Cliente cliente = dao.obtenerClientePorId(idcliente);
+	    	
+	        dao.actualizarclienteF(cliente);
+	        return "redirect:/viewClienteF/{idcliente}"; // Redirigir a la lista de docentes después de editar
+	    }*/
 
 	    
 	    // 
