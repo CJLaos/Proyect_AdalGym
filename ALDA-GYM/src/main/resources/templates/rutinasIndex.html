@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rutinas Personalizadas - Alda GYM</title>
+
+    <!-- Incluye las hojas de estilo de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    
+</head>
+
+<body>
+
+   <div th:replace="~{fragments/nav :: navbar}"></div>
+
+    <!-- Encabezado con imagen de fondo -->
+    
+    <header style="background-image: url('./'); background-size: cover; background-position: center; height: 300px;" class="jumbotron text-center">
+        <h1 class="display-4">Rutinas Personalizadas</h1>
+        <p class="lead">Alcanza tus objetivos con nuestras rutinas diseñadas especialmente para ti.</p>
+    </header>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-4">
+        <section>
+            <h2>Beneficios de Nuestras Rutinas Personalizadas</h2>
+            <p>
+                En Alda GYM, nos esforzamos por ofrecer rutinas personalizadas que se adapten a tus objetivos y
+                necesidades específicas. Algunos de los beneficios de nuestras rutinas incluyen:
+            </p>
+            <ul>
+                <li>Optimización del rendimiento físico.</li>
+                <li>Mejora de la salud cardiovascular.</li>
+                <li>Aumento de la fuerza y resistencia.</li>
+                <li>Entrenamiento adaptado a tu nivel de condición física.</li>
+                <li>Asesoramiento profesional de nuestros entrenadores certificados.</li>
+            </ul>
+        </section>
+
+        <!-- Imágenes de ejemplos de rutinas -->
+        <div class="container mt-4">
+		<!-- Contenido de la página -->
+		
+
+		<div class="row mt-4">
+			<!-- Servicios -->
+			<div class="col-md-4">
+				<!-- Redirecciona a pagina Empleado -->
+				<a class="nav-link" >
+				<div class="card border-rounded shadow">
+					<img src="./RutinaPer.jpg" class="card-img-top" alt="Servicios">
+					<div class="card-body">
+						<h5 class="card-title">Rutina de Brazos</h5>
+                        <p class="card-text">Estas rutinas están diseñadas para fortalecer y tonificar los músculos de tus brazos. Puedes realizar estos ejercicios con pesas o utilizando el peso de tu propio cuerpo. Recuerda mantener una técnica adecuada y ajustar la resistencia según tu nivel de condición física.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<!-- Planes Alimenticios -->
+			<div class="col-md-4">
+				<!-- Redirecciona a pagina Empleado -->
+				<a class="nav-link" >
+				<div class="card border-rounded shadow">
+					<img src="./RutinaCardio.jpg" class="card-img-top" alt="Planes Alimenticios">
+					<div class="card-body">
+						<h5 class="card-title">Rutina Cardiovascular</h5>
+                        <p class="card-text">Estas rutinas están diseñadas para mejorar tu resistencia cardiovascular, promoviendo la salud del corazón y aumentando la capacidad pulmonar. Incluye una combinación de ejercicios aeróbicos que elevan tu frecuencia cardíaca de manera sostenida.</p>
+
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<!-- Rutinas Personalizadas -->
+			<div class="col-md-4">
+				<!-- Redirecciona a pagina Empleado -->
+				<a class="nav-link" >
+				<div class="card border-rounded shadow">
+					<img src="./RutinaPiernas.jpg" class="card-img-top" alt="Rutinas Personalizadas">
+					<div class="card-body">
+						<h5 class="card-title">Rutina de Piernas</h5>
+                        <p class="card-text">Estas rutinas están diseñadas para trabajar los músculos de las piernas, proporcionando tanto fortalecimiento como tonificación. Incluye una combinación de ejercicios que se centran en los cuádriceps, isquiotibiales, glúteos y pantorrillas. .</p>
+
+							
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Alda GYM. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Incluye los scripts de Bootstrap (jQuery y Popper.js son necesarios) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

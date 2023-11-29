@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Editar Docente</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+</head>
+<body>
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+	<div class="container-fluid">
+    <h2>Editar Cliente</h2>
+    
+    <form th:action="@{'/guardarClienteF'}" th:object="${cliente}" method="post">
+        <!-- Agrega tus campos de formulario para editar -->
+        <!-- Por ejemplo: -->
+        <label>ID:</label>
+        <input type="number" th:field="*{idcliente}" readonly="readonly" />
+        
+        
+       
+        <p>
+			<label>Ingrese el Nombre:</label>
+		<input type="text" placeholder="Ingrese nombre" required="" th:field="*{nombrecliente}">
+	</p>
+	<p>
+		<label>Ingrese el Apellido:</label>
+		<input type="text" placeholder="Ingrese apellido" required="" th:field="*{apellidocliente}">
+	</p>
+	<p>
+		<label>Ingrese el email:</label>
+		<input type="email" placeholder="Ingrese email"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Por favor, ingrese un correo valido."   th:field="*{correocliente}">
+	</p>
+	<p>
+		<label>Ingrese la nueva contraseña:</label>
+		<input type="text" placeholder="Ingrese contraseña"  pattern=".{6,}" title="Por favor, ingrese al menos 6 caracteres." required=""  th:field="*{contraseñacliente}">
+	</p>
+	<p>
+		<label>Ingrese el Telefono:</label>
+		<input type="number" placeholder="Ingrese Telefono" min="900000000" title="Por favor, ingrese al menos 9 números." required="" th:field="*{telefonocliente}">
+	</p>
+	
+	 <p>
+			<label>Ingrese el Peso:</label>
+		<input type="number" placeholder="Ingrese peso"  required min="1" max="300" th:field="*{pesocliente}" step="any" >
+	</p>
+	<p>
+		<label>Ingrese la Altura:</label>
+		<input type="number" placeholder="Ingrese altura" required min="1" max="2.5" th:field="*{altura}" step="any">
+	</p>
+	
+	<p>
+		<label>Ingrese el ID del Trainer:</label>
+		<input type="number" placeholder="Ingrese id trainer" required th:field="*{idtrainer}">
+	</p>
+	<p>
+		<label>Ingrese el plan  alimenticio:</label>
+		<input type="number" placeholder="Ingrese plan Alimenticio" required min="1" max="5" th:field="*{id_Plan_Aliment}">
+	</p>
+	
+	
+	<p>
+        
+        <!-- Agrega los demás campos -->
+        
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+	</div>
+	
+	<!-- Pie de página llamando fracmento footer -->
+	
+</body>
+<footer>
+	<div th:replace="~{fragments/footer :: footer_frac}"></div>
+</footer>
+</html>

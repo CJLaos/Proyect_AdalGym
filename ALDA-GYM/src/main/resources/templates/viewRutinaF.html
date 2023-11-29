@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+</head>
+<body>
+	
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+	
+<h2>Listado de Rutina Semanal</h2>
+
+
+<div class="container-fluid">
+  <a th:href="@{/}" class="btn btn-primary"> Volver</a>
+<div th:replace="~{fragments/tablaRutina :: tablaRutina}"></div>
+
+<!-- Content here -->
+</div>
+<!-- Pie de página llamando fracmento footer -->
+	<div th:replace="~{fragments/footer :: footer_frac}"></div>
+</body>
+</html>

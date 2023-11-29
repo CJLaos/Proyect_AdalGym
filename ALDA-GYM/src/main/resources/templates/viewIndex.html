@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+</head>
+<body>
+	
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+	
+<h2>Listado de Entrenadores</h2>
+
+
+<div class="container-fluid">
+  <a th:href="@{/nuevo}" class="btn btn-primary">  Nuevo</a>
+<table class="table" border="1">
+	<thead>
+		<tr>
+			<th>ID o DNI</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Sueldo</th>
+			<th>Telefono</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="entrenador:${listaEntrenador}">
+			<td th:text="${entrenador.idtrainer}"></td>
+			<td th:text="${entrenador.nombretrainer}"></td>
+			<td th:text="${entrenador.apellidotrainer}"></td>
+			<td th:text="${entrenador.sueldotrainer}"></td>
+			<td th:text="${entrenador.telefonotrainer}"></td>
+			
+			 <td>
+            <a th:href="@{'/editar/' + ${entrenador.idtrainer}}" class="btn btn-warning">Editar</a>
+            <a th:href="@{'/borrar/' + ${entrenador.idtrainer}}" class="btn btn-danger" onclick="return confirm('¿Estás seguro de borrar este docente?')">Borrar</a>
+        </td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+<!-- Content here -->
+</div>
+<!-- Pie de página llamando fracmento footer -->
+	<div th:replace="~{fragments/footer :: footer_frac}"></div>
+</body>
+</html>

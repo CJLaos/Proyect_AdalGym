@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Borrar Entrenadores</title>
+	
+</head>
+<body>
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+    <h2>Borrar Docente</h2>
+    
+    <p>¿Estás seguro de borrar este entrenador?</p>
+    
+    <form th:action="@{'/borrar/' + ${docente.iddocente}}" method="post">
+        <button type="submit" class="btn btn-danger">Confirmar Borrado</button>
+        <a th:href="@{/viewIndex}" class="btn btn-secondary">Cancelar</a>
+    </form>
+    
+    
+</body>
+</html>

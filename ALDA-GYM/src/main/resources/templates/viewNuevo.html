@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+</head>
+<body>
+	
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+	<div class="container-fluid">
+<h2>Crear Nuevo Entrenador</h2>
+
+<form id="form1" th:action="@{/guardar}" th:object="${entrenador}" method="post" >
+	<p>
+		<p>
+			<label>Ingrese el DNI:</label>
+		<input type="number" placeholder="Ingrese el ID" min="10000000" title="Por favor, ingrese al menos 8 números" required="" th:field="*{idtrainer}">
+	</p>
+	
+	  <p>
+			<label>Ingrese el Nombre:</label>
+		<input type="text" placeholder="Ingrese nombre" required="" th:field="*{nombretrainer}">
+	</p>
+	<p>
+		<label>Ingrese el Apellido:</label>
+		<input type="text" placeholder="Ingrese apellido" required="" th:field="*{apellidotrainer}">
+	</p>
+	<p>
+		<label>Ingrese el sueldo:</label>
+		<input type="number" placeholder="Ingrese sueldo" min="1050" title="Por favor, ingrese mas que el sueldo minimo de 1050"  required="" th:field="*{sueldotrainer}">
+	</p>
+	<p>
+		<label>Ingrese el Telefono:</label>
+		<input type="number" placeholder="Ingrese telefono" min="900000000" title="Por favor, ingrese al menos 9 números." required="" th:field="*{telefonotrainer}">
+	</p>
+	
+	
+	
+		<input type="submit"  class="btn btn-primary" value="Guardar">
+	</p>
+</form>
+	</div>
+
+
+<!-- Pie de página llamando fracmento footer -->
+	
+</body>
+<footer>
+	<div th:replace="~{fragments/footer :: footer_frac}"></div>
+</footer>
+</html>

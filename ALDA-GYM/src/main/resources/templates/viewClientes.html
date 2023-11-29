@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+</head>
+<body>
+	
+	<!-- Nav bar Usando Fragmentos  -->
+	<div th:replace="~{fragments/nav :: navbar}"></div>
+	
+<h2>Listado de Clientes</h2>
+
+
+<div class="container-fluid">
+  <a th:href="@{/nuevocliente}" class="btn btn-primary">  Nuevo</a>
+<table class="table" border="1">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>E-Mail</th>
+			<th>Telefono</th>
+			<th>Categorita</th>
+			<th>Trainer</th>
+			<th>Clasificacion IMC</th>
+			<th>Plan Alimenticio</th>
+			<th>Rutina</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="cliente:${listaClientes}">
+			<td th:text="${cliente.idcliente}"></td>
+			<td th:text="${cliente.nombrecliente}"></td>
+			<td th:text="${cliente.apellidocliente}"></td>
+			<td th:text="${cliente.correocliente}"></td>
+			<td th:text="${cliente.telefonocliente}"></td>
+			<td th:text="${cliente.id_categoria}"></td>
+			<td th:text="${cliente.idtrainer}"></td>
+			<td th:text="${cliente.clasificarIMC}"></td>
+			<td th:text="${cliente.id_Plan_Aliment}"></td>
+			<td th:text="${cliente.id_rutina}"></td>
+			 <td>
+            <a th:href="@{'/editarCliente/' + ${cliente.idcliente}}" class="btn btn-warning">Editar</a>
+            <a th:href="@{'/viewRutina/' + ${cliente.id_rutina}}" class="btn btn-info">Rutina</a>
+            <a th:href="@{'/editarCliente/' + ${cliente.idcliente}}" class="btn btn-info">Plan Alimenticio</a>
+            <a th:href="@{'/enviar-datos-por-email/' + ${cliente.idcliente}}" class="btn btn-info">Enviar E-mail</a>
+            <a th:href="@{'/borrarCliente/' + ${cliente.idcliente}}" class="btn btn-danger" onclick="return confirm('¿Estás seguro de borrar este cliente?')">Borrar</a>
+        </td>
+		</tr>
+	</tbody>
+</table> <br>
+
+
+
+<!-- Content here -->
+</div>
+<!-- Pie de página llamando fracmento footer -->
+	<div th:replace="~{fragments/footer :: footer_frac}"></div>
+</body>
+</html>
